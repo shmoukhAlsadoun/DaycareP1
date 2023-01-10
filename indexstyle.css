@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    font-family: 'El Messiri', sans-serif;
+}
+header a {
+    padding: 15px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #579BB1;
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: #F8F4EA;
+    font-size: 20px;
+}
+
+nav a:hover {
+    background-color: #F8F4EA;
+    color: #579BB1;
+}
+
+.brand a:hover {
+    
+    background-color: #579BB1;
+    padding: 0;
+
+}
+.menu {
+    flex-grow: 1;
+}
+
+.one {
+    display: flex;
+    justify-content: space-around;
+    height: 45vh;
+    background-color: #F8F4EA;
+    margin-bottom: 50px;
+}
+
+.martop {
+
+    margin-top: 60px;
+
+}
+
+.martop h1 {
+    font-size: 45px;
+    color: #579BB1;
+}
+
+.martop h3 {
+
+    font-size: 27px;
+    color: #3c849c;
+
+}
+
+.list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.list h1 {
+    color: #3c849c;
+
+    
+}
+
+.list h4 {
+    color: #3c849c;
+}
+
+.flex-item {
+    margin: 5px;
+    
+}
+
+.card {
+    /* border: 1px solid #3c849c;
+    border-radius: 5px; */
+    
+}
+
+.bodycard h1 {
+
+    text-align: center;
+
+}
+
+.mid {
+    background-color: #579BB1;
+    font-size: 20px;
+    color: #F8F4EA;
+    padding: 5px;
+    height: 15vh;
+    
+}
+
+.mid h1 {
+    
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding-top: 30px;
+
+}
+
+.mid2 {
+    background-color: #579BB1;
+}
+.mid2 h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #F8F4EA;
+    margin: 0px;
+
+}
+.mid3 h1 {
+    color: #579BB1;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+footer {
+    background-color: #579BB1;
+    display: flex;
+   align-items: center;
+   color: #F8F4EA;
+   justify-content: center;
+   margin-top: 80px;
+   
+}
+
+.fflex {
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    
+}
+
