@@ -1,363 +1,206 @@
 <!DOCTYPE html>
 <html>
-    <head>
-       <title>Registration Form</title>
-    </head>
-    <body>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
 
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4F7942;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #ADD8E6;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #ADD8E6;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<h3>Contact Form</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fullNmae">الاسم الرباعي :</label>
+    <input type="text" id="fullName" name="FullName">
+
+    <label for="gender">الجنس :</label>
+    <input type="text" id="gender" name="gender">
+
+    <label for="age">العمر :</label>
+    <input type="text" id="age" name="age">
     
-    <form>
-        <table>
-            <tr>
-                <td>
-                    الاسم الرباعي :
-                </td>
-                <td>
-                    <input type = "text" placeholder = "الاسم الرباعي" name ="">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    الجنس :
-                </td>
-                <td>
-                    <input type ="radio" placeholder="الجنس" name ="Gender">ذكر
-                    <input type ="radio" placeholder="الجنس" name ="Gender">انثى
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    العمر:
-                </td>
-                <td>
-                    <input type ="number" placeholder = "العمر" name ="">
-                </td>
-            </tr>
-            <tr>
-                <tr>
-                    <td>
-                        الجنسية:
-                    </td>
-                    <td>
-                        <input type ="text" placeholder = "الجنسية" name ="">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        رقم السجل المدني/الاقامة :
-                    </td>
-                    <td>
-                        <input type ="number" placeholder = "رقم السجل المدني /رقم الاقامة " name ="">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        تاريخ ميلاد الطفل :
-                    </td>
-                    <td>
-                        <input type ="date" placeholder = "تاريخ الميلاد" name ="">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        مكان الميلاد:
-                    </td>
-                    <td>
-                        <input type ="text" placeholder = "مكان الميلاد" name ="">
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                      نرجو ارفاق ملف مكون من : شهادة الميلاد - شهادة التطعيم - سجل الاسرة 
-                    </td>
-                    <td>
-                        <input type ="file" placeholder="ارفق الملف " name ="">
-                    </td>
-                </tr>
-
-                </td>
-                <td>
-                    اسم ولي الامر:
-                </td>
-                <td>
-                    <input type ="text"placeholder = "اسم ولي الامر" name=""> 
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    رقم الجوال:
-                </td>
-                <td>
-                    <select>
-                        <option>966</option>
-                    </select>
-                    <input type ="phone" placeholder ="5********" name ="">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    الوظيفة:
-                </td>
-                <td>
-                    <input type ="radio" placeholder = "طالب/ة" name ="choice-radio">طالب
-                    <input type ="radio" placeholder="اداري/ة" name ="choice-radio">اداري
-                    <input type ="radio" placeholder="عضو هيئة تدريس" name ="choice-radio">عضو هيئة تدريس
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    جهة العمل:
-                </td>
-                <td>
-                    <input type = "text" placeholder="جهة العمل" name="">
-
-               </td>
-
-            <tr>
-                <td>
-                   اشخاص يمكن الاتصال بهم :
-                </td>
-                <td>
-                 <input type ="text" placeholder="الاسم"  name="">
-                 <input type ="text" placeholder="صلة القرابه" name ="">
-                </td>
-                <td>
-                    <select>
-                        <option>966</option>
-                    </select>
-                    <input type ="phone" placeholder ="5********" name ="">
-                </td>
-            </tr>
-             
-            <tr>
-                <td>
-                   حالة الوالدين:
-                </td>
-
-                <td>
-                    <select>
-                        <option>منفصلان</option>
-                        <option>غير ذلك</option>
-                        <input type="text" placeholder="حالة الوالدين " name ="">
-                    </select>
-               </td>
-
-            </tr>
-            
-            <tr>
-               <td>
-                  مع من يسكن الطفل ؟
-               </td>
-               <td>
-                <input type = "text" placeholder="مع من يسكن الطفل "name ="">
-               </td>
-
-            </tr>
-            
-            <tr>
-                <td>
-                   عنوان السكن :
-                </td>
-                <td>
-                    <textarea row="5" col="17" placeholder="عنوان السكن" ></textarea>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                 عدد افراد العائلة:
-                </td>
-                <td>
-                 <input type ="number" placeholder="عدد افراد العائلة " name ="">
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                   ترتيب الطفل بين اخوانه :
-                </td>
-                <td>
-                    <input type ="number" placeholder= "ترتيب الطفل بين اخوانه " name ="">
-                </td>
-            </tr>
-
-            <tr>
-               <td>
-الشخص المسؤول عن احضار الطفل للحضانة واستلامه يوميا هو :
-               </td>
-               <td>
-                <input type ="radio" placeholder="الام" name ="choice-radio">الام 
-                <input type ="radio" placeholder="الاب"name ="choice-radio">الاب
-                <input type ="radio" placeholder="غير ذلك"name ="choice-radio">غير ذلك
-
-                <select>
-                    <option>966</option>
-                </select>
-                <input type ="phone" placeholder ="5********" name ="">
-                <input type ="text" placeholder=" الاسم" name ="">
-               </td>
-
-            </tr>
-             <tr>
-                <td>
-                   هل يوجد خادمة في المنزل ؟
-                </td>
-                <td>
-                    <input type ="radio" placeholder="نعم " name ="choice-radio">نعم
-                    <input type ="radio" placeholder="لا " name ="choice-radio">لا
-
-                </td>
-             </tr>
-
-             <tr>
-
-                <td>
-                   اذا كانت الاجابة (نعم) هل تقوم الخادمة برعاية الطفل ؟
-        
-                </td>
-                <td>
-                    <input type = "radio" placeholder="نعم " name="choice-radio">نعم 
-                    <input type = "radio" placeholder="لا" name ="choice-radio">لا
-                </td>
-
-                <td>
-                    اذا كانت الاجابة (نعم) ما هي الاعمال المكلفة بها لخدمة الطفل ؟
-                </td>
-                <td>                   
-                    <input type = "text" placeholder="مثلا استخدام المرحاض ... الخ " name="">
-                </td>
-                 <td>
-                 اذا كانت الاجابة (لا) فمن الذي يقوم بتقديم الرعاية لطفلك ؟
-                 </td>
-                 <td>
-                    <input type = " text " placeholder="الام-الاب-الاخت-الخ" name ="">
-                 </td>
-
-            </tr>
-
-             <tr>
-                <td>
-                    هل يميل طفلك الى الهدوء؟
-                </td>
-                <td>
-                  <input type = "radio" placeholder="نعم" name ="choice-radio">نعم
-                  <input type = "radio" placeholder="لا" name ="choice-radio">لا
-                </td>
-             </tr>
-             <tr>
-                <td>
-                    هل يعتمد طفلك على نفسه في استخدام المرحاض؟
-                </td>
-                <td>
-                  <input type = "radio" placeholder="نعم" name ="choice-radio">نعم
-                  <input type = "radio" placeholder="لا" name ="choice-radio">لا
-                </td>
-             </tr>
-             <tr>
-                <td>
-                    هل يعتمد طفلك على نفسه في ارتداء ملابسه؟
-                </td>
-                <td>
-                  <input type = "radio" placeholder="نعم" name ="choice-radio">نعم
-                  <input type = "radio" placeholder="لا" name ="choice-radio">لا
-                </td>
-             </tr>
-
-             <tr>
-                <td>هل يحب الطفل الاختلاط بالاخرين؟</td>
-                <td>
-                    <input type ="radio" placeholder="نعم "name ="choice-radio">نعم
-                    <input type="radio" placeholder="لا" name ="choice-radio">لا
-                </td>
-             </tr>
-             <tr>
-              <td>هل ينادى الطفل باسم غير اسمه؟</td>
-                <td>
-                 <input type ="radio" placeholder="نعم"name ="choice-radio">نعم
-                    <input type="radio" placeholder="لا" name ="choice-radio">لا   
-                </td>
-                <td>اذا كانت الاجابه (نعم) يذكر الاسم الاخر :</td>
-                <td>
-                    <input type ="text" placeholder="الرجاء ذكره:" name ="">
-                </td>
-             </tr>
-             <tr>
-                <td>هل يعاني الطفل من اي مشاكل صحية ؟</td>
-                <td>
-                    <input type ="radio" placeholder="نعم"name ="choice-radio">نعم
-                    <input type="radio" placeholder="لا" name ="choice-radio">لا
-                    <td>
-                         <input type = "text" placeholder="الرجاء ذكرها " name = "">
-                    </td>
-                </td>
-             </tr>
-             <tr>
-                <td>هل يعاني من بعض الصعوبات اللغوية كالتأتأة والتلعثم وغيرها؟</td>
-                <td>
-                    <input type ="radio" placeholder="نعم"name ="choice-radio">نعم
-                    <input type="radio" placeholder="لا" name ="choice-radio">لا
-                    <td>
-                        <input type = "text" placeholder="الرجاء ذكرها " name = "">
-                    </td>
-                </td>
-             </tr>
-             <tr>
-                 <td>
-
-                 </td>
-                 <td>
-                    <input type ="radio" placeholder="نعم"name ="choice-radio">نعم
-                    <input type="radio" placeholder="لا" name ="choice-radio">لا
-                    <h4>نرجو توضيح طريقة النوم المحببة للطفل :</h4>
-                    <input type ="text" placeholder="طريقة النوم المحببة للطفل" name="">
-                 </td>
-             </tr>
-     <div>
-             <tr>
-                <td>هل يعاني من اضطرابات بالاكل؟</td>
-                <td>
-                    <input type ="radio" placeholder="نعم" name="">نعم
-                    <input type ="radio" placeholder="لا" name="">لا
-                </td>
-                <td>
-                <h4>ما هي الاكلات المفضلة لدى الطفل ؟</h4><input type ="text" placeholder="الاكلات المفضلة لدى الطفل؟ " name="">
-                <h4>ما هي الاكلات التي لا يحبها الطفل؟</h4><input type ="text" placeholder="الاكلات التي لا يحبها الطفل؟" name="">
-                <h4>ما هي الاشياء التي يخافها الطفل ؟</h4><input type ="text" placeholder="الاشياء التي يخافها الطفل ؟" name="">
-                </td>
-                <td>
-                    هل يعاني من حساسة لأي نوع من أنواع الأطعمة أو الأدوية ؟
-                </td>
-                <td>
-                    <input type ="radio" placeholder="نعم" name="choice-radio">نعم
-                    <input type ="radio" placeholder="لا" name="choice-radio">لا 
-                    <input type ="text" placeholder="الرجاء ذكرها:" name="">
-                </td>
-             </tr>
-
-     </div>
-            
-           <div>
-              <tr>
-                 
-                <td>
-                   <h4>اسم الشخص الذي قام بتعبئة الاستمارة:</h4> <input type ="text" placeholder="مثلا نورة محمد " name ="">
-                    <h4>صلة القرابة بالطفل :</h4><input type ="text" placeholder="والده - والدته - ...الخ" name ="">
-                    <h4>التاريخ</h4><input type ="date" placeholder="" name="">
-                </td>
-                      <h5>تعبأ الاستمارة من قبل ولي الأمر قبل التحاق الطفل بالحضانة .</h5>
-
-
-              </tr>
-               
-           </div>
-
-
-            <td>
-                <input type ="submit" value="submit" name="">
-            </td>
-        </table>
-    </form>
-    </body>
+    <label for="nationality">الجنسية :</label>
+    <input type="text" id="nationality" name="nationality">
+    
+    <label for="ID">رقم السجل المدني /الاقامة:</label>
+    <input type="text" id="lname" name="lastname">
+    
+    <label for="lname">تاريخ ميلاد الطفل :</label>
+    <input type="text" id="ID" name="ID">
+    
+    <label for="POB">مكان الميلاد:</label>
+    <input type="text" id="POB" name="POB">
+    
+    <label for="Pname">اسم ولي الامر:</label>
+    <input type="text" id="Pname" name="Pname">
+    
+    <label for="Pnum">رقم الجوال:</label>
+    <input type="text" id="Pnum" name="Pnum">
+    
+    <label for="job">الوظيفة:</label>
+    <input type="text" id="job" name="job">
+    
+    <label for="Employer">جهة العمل :</label>
+    <input type="text" id="Employer" name="Employer">
+    
+    <label for="Pnum2">اشخاص يمكن الاتصال بهم :</label>
+    <input type="text" id="Pnum2" name="Pnum2">
+    
+    <label for="Psit">حالة الوالدين : </label>
+    <input type="text" id="Psit" name="Psit">
+    
+    <label for="childParent">مع من يسكن الطفل ؟</label>
+    <input type="text" id="childParent" name="childParent">
+    
+    <label for="address">عنوان السكن :</label>
+    <input type="text" id="address" name="address">
+    
+    <label for="familynum">عدد افراد العائلة : </label>
+    <input type="text" id="familynum" name="familynum">
+    
+    <label for="childRank">ترتيب الطفل بين اخوانه :</label>
+    <input type="text" id="childRank" name="childRank">
+    
+    <label for="Responsibility">الشخص المسؤول عن احضار الطفل للحضانه واستلامه يوميا هو :</label>
+    <input type="text" id="Responsibility" name="Responsibility"> <br>
+    
+    <p>هل يوجد خادمة في المنزل ؟</p>
+  <input type="radio" id="age1" name="age" value="30">
+  <label for="age1">نعم</label>
+  <input type="radio" id="age2" name="age" value="60">
+  <label for="age2">لا</label> <br>
   
+  <label for="care">اذا كانت الاجابه (نعم )هل تقول الخادمة برعاية الطفل ؟ </label>
+    <input type="text" id="care" name="care">
+    <label for="tasks">اذا كانت الاجابه (نعم ) ماهي الأعمال المكلفة بها لخدمة الطفل ؟</label>
+    <input type="text" id="tasks" name="tasks">
+    <label for="carer">اذا كانت الاجابه (لا ) فمن الذي يقوم بتقديم الرعاية لطفلك ؟</label>
+    <input type="text" id="carer" name="carer">
+
+  <p>هل يميل طفلك الى الهدوء ؟</p>
+  <input type="radio" id="age1" name="age" value="30">
+  <label for="age1">نعم</label>
+  <input type="radio" id="age2" name="age" value="60">
+  <label for="age2">لا</label> 
+  
+  <p>هل يعتمد طفلك على نفسه في استخدام المرحاض؟</p>
+  <input type="radio" id="age1" name="age" value="30">
+  <label for="age1">نعم</label>
+  <input type="radio" id="age2" name="age" value="60">
+  <label for="age2">لا</label>
+  
+  <p>هل يعتمد طفلك على نفسه في ارتداء ملابسه؟</p>
+  <input type="radio" id="age1" name="age" value="30">
+  <label for="age1">نعم</label>
+  <input type="radio" id="age2" name="age" value="60">
+  <label for="age2">لا</label> 
+  
+  <p>هل يحب الطفل الاختلاط بالاخرين ؟</p>
+  <input type="radio" id="age1" name="age" value="30">
+  <label for="age1">نعم</label>
+  <input type="radio" id="age2" name="age" value="60">
+  <label for="age2">لا</label> 
+  
+  <p>هل ينادى الطفل باسم غير اسمه ؟</p>
+  <input type="radio" id="age1" name="age" value="30">
+  <label for="age1">نعم</label>
+  <input type="radio" id="age2" name="age" value="60">
+  <label for="age2">لا</label> <br><br>
+  
+  <label for="lname">اذا كانت الاجابة (نعم) يذكر الاسم الاخر :</label>
+    <input type="text" id="lname" name="lastname">
+  
+  <p>هل يعاني الطفل من اي مشاكل صحية؟</p>
+  <input type="radio" id="age1" name="age" value="30">
+  <label for="age1">نعم</label>
+  <input type="radio" id="age2" name="age" value="60">
+  <label for="age2">لا</label> <br>
+  
+    <label for="lname">اذا كانت الاجابة (نعم) الرجاء ذكرها :</label>
+    <input type="text" id="lname" name="lastname">
+
+  
+  <p>هل يعاني من بعض الصعوبات اللغوية كالتأتأة والتعلثم وغيرها ؟</p>
+  <input type="radio" id="age1" name="age" value="30">
+  <label for="age1">نعم</label>
+  <input type="radio" id="age2" name="age" value="60">
+  <label for="age2">لا</label> 
+  
+  <p>هل يعاني من اضطرابات بالاكل ؟</p>
+  <input type="radio" id="age1" name="age" value="30">
+  <label for="age1">نعم</label>
+  <input type="radio" id="age2" name="age" value="60">
+  <label for="age2">لا</label> <br>
+  
+    <label for="lname">ماهي الاكلات المفضله للطفل ؟ </label>
+    <input type="text" id="lname" name="lastname">
+    
+    <label for="lname">ماهي الاكلات التي لا يحبها الطفل ؟</label>
+    <input type="text" id="lname" name="lastname">
+    
+    <label for="lname">ماهي الأشياء التي يخافها الطفل ؟</label>
+    <input type="text" id="lname" name="lastname">
+    
+    <label for="lname">ماهي الأشياء التي يخافها الطفل ؟</label>
+    <input type="text" id="lname" name="lastname">
+  
+  <p>هل يعاني من حساسية لأي نوع من أنواع الأطعمة أو الادوية؟</p>
+  <input type="radio" id="age1" name="age" value="30">
+  <label for="age1">نعم</label>
+  <input type="radio" id="age2" name="age" value="60">
+  <label for="age2">لا</label> <br>
+
+     <label for="lname">نرجو توضيح  طريقة النوم المحببة للطفل :</label>
+    <input type="text" id="lname" name="lastname">
+    
+    
+    
+    
+        <label for="lname">اسم الشخص الذي قام بتعبئة الاستمارة :</label>
+    <input type="text" id="lname" name="lastname">
+        <label for="lname">صلة القرابة بالطفل :</label>
+    <input type="text" id="lname" name="lastname">
+    
+        <form action="/action_page.php">
+  <label for="birthday">التاريخ :</label>
+  <input type="date" id="birthday" name="birthday">
+  <input type="submit">
+  
+  </form>
+</div>
+
+</body>
 </html>
