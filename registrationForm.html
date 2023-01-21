@@ -39,27 +39,36 @@ input[type=submit]:hover {
 </head>
 <body>
 
-<h3>تعبأ الاستمارة من قبل ولي الامر قبل التحاق الطفل بالحضانة</h3>
+<h3>تعبا هذه الاستماره من قبل ولي امر الطفل </h3>
 
 <div class="container">
   <form action="/action_page.php">
     <label for="fullNmae">الاسم الرباعي :</label>
-    <input type="text" id="fullName" name="FullName">
+    <input type="text" id="fullName" name="FullName"><br>
+
+     <tr>
+      <td>
 
     <label for="gender">الجنس :</label>
-    <input type="text" id="gender" name="gender">
+      </td>
+       <td>
+    <input type="radio" name="gender">ذكر
+    <input type="radio" name="gender">انثى
+      <br><br>
+    </td>
+     </tr>
 
     <label for="age">العمر :</label>
-    <input type="text" id="age" name="age">
+    <input type="number" id="age" name="age"><br><br>
     
     <label for="nationality">الجنسية :</label>
     <input type="text" id="nationality" name="nationality">
     
     <label for="ID">رقم السجل المدني /الاقامة:</label>
-    <input type="text" id="lname" name="lastname">
+    <input type="text" id="lname" name="lastname"><br><br>
     
     <label for="lname">تاريخ ميلاد الطفل :</label>
-    <input type="text" id="ID" name="ID">
+    <input type="date" id="ID" name="ID"><br><br>
     
     <label for="POB">مكان الميلاد:</label>
     <input type="text" id="POB" name="POB">
@@ -98,10 +107,10 @@ input[type=submit]:hover {
     <input type="text" id="Responsibility" name="Responsibility"> <br>
     
     <p>هل يوجد خادمة في المنزل ؟</p>
-  <input type="radio" id="age1" name="age" value="30">
-  <label for="age1">نعم</label>
-  <input type="radio" id="age2" name="age" value="60">
-  <label for="age2">لا</label> <br>
+  <input type="radio"  name="choice-radio" >نعم
+
+  <input type="radio"  name="choice-radio" >لا
+   <br>
   
   <label for="care">اذا كانت الاجابه (نعم )هل تقول الخادمة برعاية الطفل ؟ </label>
     <input type="text" id="care" name="care">
@@ -110,61 +119,113 @@ input[type=submit]:hover {
     <label for="carer">اذا كانت الاجابه (لا ) فمن الذي يقوم بتقديم الرعاية لطفلك ؟</label>
     <input type="text" id="carer" name="carer">
 
+    <tr>
+      <td>
   <p>هل يميل طفلك الى الهدوء ؟</p>
-  <input type="radio" id="age1" name="age" value="30">
-  <label for="age1">نعم</label>
-  <input type="radio" id="age2" name="age" value="60">
-  <label for="age2">لا</label> 
-  
+      </td>
+      <td>
+  <input type="radio"  name="choice-radio1" >نعم
+
+  <input type="radio" name="choice-radio1">لا
+ 
+  </td>
+    </tr>
+
+
+    <tr>
+      <td>
   <p>هل يعتمد طفلك على نفسه في استخدام المرحاض؟</p>
-  <input type="radio" id="age1" name="age" value="30">
-  <label for="age1">نعم</label>
-  <input type="radio" id="age2" name="age" value="60">
-  <label for="age2">لا</label>
-  
+      </td>
+      <td>
+  <input type="radio"  name="choice-radio2" >نعم
+
+  <input type="radio" name="choice-radio2">لا
+ 
+  </td>
+    </tr>
+
+
+    <tr>
+      <td>
+
   <p>هل يعتمد طفلك على نفسه في ارتداء ملابسه؟</p>
-  <input type="radio" id="age1" name="age" value="30">
-  <label for="age1">نعم</label>
-  <input type="radio" id="age2" name="age" value="60">
-  <label for="age2">لا</label> 
-  
+      </td>
+      <td>
+  <input type="radio"  name="choice-radio3" >نعم
+
+  <input type="radio" name="choice-radio3">لا
+ 
+  </td>
+    </tr>
+
+
+    <tr>
+      <td>
+
   <p>هل يحب الطفل الاختلاط بالاخرين ؟</p>
-  <input type="radio" id="age1" name="age" value="30">
-  <label for="age1">نعم</label>
-  <input type="radio" id="age2" name="age" value="60">
-  <label for="age2">لا</label> 
+      </td>
+      <td>
+  <input type="radio"  name="choice-radio4" >نعم
+
+  <input type="radio" name="choice-radio4">لا
+ 
+  </td>
+    </tr>
+
+    <tr>
+      <td>
   
   <p>هل ينادى الطفل باسم غير اسمه ؟</p>
-  <input type="radio" id="age1" name="age" value="30">
-  <label for="age1">نعم</label>
-  <input type="radio" id="age2" name="age" value="60">
-  <label for="age2">لا</label> <br><br>
-  
+      </td>
+      <td>
+  <input type="radio" name="choice-radio5" >نعم
+
+  <input type="radio" name="choice-radio5" >لا
+      </td>
+    </tr>
+   <br>
   <label for="lname">اذا كانت الاجابة (نعم) يذكر الاسم الاخر :</label>
     <input type="text" id="lname" name="lastname">
-  
+
+
+  <tr>
+    <td>
   <p>هل يعاني الطفل من اي مشاكل صحية؟</p>
-  <input type="radio" id="age1" name="age" value="30">
-  <label for="age1">نعم</label>
-  <input type="radio" id="age2" name="age" value="60">
-  <label for="age2">لا</label> <br>
-  
+     </td>
+       <td>
+  <input type="radio"  name="choice-radio6" >نعم
+  <input type="radio"  name="choice-radio6" >لا
+   <br>
+       </td>
+  </tr>
+       
     <label for="lname">اذا كانت الاجابة (نعم) الرجاء ذكرها :</label>
     <input type="text" id="lname" name="lastname">
 
-  
+  <tr>
+    <td>
   <p>هل يعاني من بعض الصعوبات اللغوية كالتأتأة والتعلثم وغيرها ؟</p>
-  <input type="radio" id="age1" name="age" value="30">
-  <label for="age1">نعم</label>
-  <input type="radio" id="age2" name="age" value="60">
-  <label for="age2">لا</label> 
+    </td>
+     <td>
+  <input type="radio" name="choice-radio7">نعم
+ 
+  <input type="radio" name="choice-radio7">لا
+
+     </td>
+  </tr>
+
+  <tr>
+    <td>
   
   <p>هل يعاني من اضطرابات بالاكل ؟</p>
-  <input type="radio" id="age1" name="age" value="30">
-  <label for="age1">نعم</label>
-  <input type="radio" id="age2" name="age" value="60">
-  <label for="age2">لا</label> <br>
-  
+    </td>
+       <td>
+  <input type="radio" name="choice-radio8" >
+ 
+  <input type="radio"  name="choice-radio8" > <br>
+       </td>
+  </tr>
+
     <label for="lname">ماهي الاكلات المفضله للطفل ؟ </label>
     <input type="text" id="lname" name="lastname">
     
@@ -177,11 +238,16 @@ input[type=submit]:hover {
     <label for="lname">ماهي الأشياء التي يخافها الطفل ؟</label>
     <input type="text" id="lname" name="lastname">
   
+  <tr>
+    <td>
   <p>هل يعاني من حساسية لأي نوع من أنواع الأطعمة أو الادوية؟</p>
-  <input type="radio" id="age1" name="age" value="30">
-  <label for="age1">نعم</label>
-  <input type="radio" id="age2" name="age" value="60">
-  <label for="age2">لا</label> <br>
+    </td>
+    <td>
+  <input type="radio"  name="choice-radio9" >نعم
+  <input type="radio" name="choice-radio9" >لا
+  <br>
+    </td>
+  </tr>
 
      <label for="lname">نرجو توضيح  طريقة النوم المحببة للطفل :</label>
     <input type="text" id="lname" name="lastname">
@@ -194,9 +260,7 @@ input[type=submit]:hover {
         <label for="lname">صلة القرابة بالطفل :</label>
     <input type="text" id="lname" name="lastname">
     
-        <form action="/action_page.php">
-  <label for="birthday">التاريخ :</label>
-  <input type="date" id="birthday" name="birthday">
+
   <input type="submit">
   
   </form>
