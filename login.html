@@ -11,7 +11,7 @@ input[type=text], input[type=password] {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 1px solid #579BB1;
   box-sizing: border-box;
 }
 
@@ -35,7 +35,9 @@ button:hover {
   width: auto;
   padding: 10px 18px;
   background-color: #ff3300;
-}
+  margin-left: 25px;
+  
+} 
 
 /* Center the image and position the close button */
 .imgcontainer {
@@ -77,14 +79,14 @@ span.psw {
 .modal-content {
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
+  border: 1px solid #579BB1;
   width: 80%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */
 .close {
   position: absolute;
-  right: 25px;
+  left: 25px;
   top: 0;
   color: #000;
   font-size: 35px;
@@ -92,9 +94,11 @@ span.psw {
 }
 
 .close:hover,
+
 .close:focus {
   color: red;
   cursor: pointer;
+  
 }
 
 /* Add Zoom Animation */
@@ -119,7 +123,13 @@ span.psw {
      display: block;
      float: none;
   }
-  .cancelbtn {
+  .signupbtn {
+     width: 100%;
+     right: 250px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .signuplbtn, .signupbtn {
      width: 100%;
   }
 }
@@ -145,17 +155,20 @@ span.psw {
 
       <label for="psw"><b>كلمة المرور</b></label>
       <input type="password" name="psw" required>
+      <span class="psw">نسيت  <a href="#">كلمة المرور؟</a></span>
         
-      <button type="submit"><a href="welcomepage.html">تسجيل دخول</a></button>
+      <button type="submit" class="signupbtn"><a href="welcomepage.html">تسجيل دخول</a></button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> تذكرني
       </label>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">نسيت  <a href="#">كلمة المرور؟</a></span>
-      <a href="signin.html">انشاء حساب</a>
+   <!-- <button type="button" onclick="document.getElementById('id01').style.display='none'" class="signupbtn">انشاء حساب</button> -->
+    <!--<button type="submit"><a href="signup.html"> انشاء حساب</a></button>-->
+   <button type="submit" class="signupbtn"><a href="signup.html">انشاء حساب</a></button>
+
+     <!--<a href="signup.html">انشاء حساب</a>-->
     </div>
   </form>
 </div>
