@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html dir="rtl">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
@@ -42,18 +45,18 @@ input[type=submit]:hover {
 <h3>تعبا هذه الاستماره من قبل ولي امر الطفل </h3>
 
 <div class="container">
-  <form action="/action_page.php">
-    <label for="fullNmae">الاسم الرباعي :</label>
-    <input type="text" id="fullName" name="FullName"><br>
+<form action="insert.php" method="post" >
+    <label for="name">الاسم الرباعي :</label>
+    <input type="text" id="fullName" name="name"><br>
 
      <tr>
       <td>
 
-    <label for="gender">الجنس :</label>
+    <label for="gender">الجنس :</label> 
       </td>
        <td>
-    <input type="radio" name="gender">ذكر
-    <input type="radio" name="gender">انثى
+    <input type="radio" checked  name="gender" value ="male">ذكر 
+    <input type="radio" name="gender" value="female">انثى
       <br><br>
     </td>
      </tr>
@@ -65,10 +68,10 @@ input[type=submit]:hover {
     <input type="text" id="nationality" name="nationality">
     
     <label for="ID">رقم السجل المدني /الاقامة:</label>
-    <input type="text" id="lname" name="lastname"><br><br>
+    <input type="text" id="lname" name="number"><br><br>
     
     <label for="lname">تاريخ ميلاد الطفل :</label>
-    <input type="date" id="ID" name="ID"><br><br>
+    <input type="date" id="ID" name="date"><br><br>
     
     <label for="POB">مكان الميلاد:</label>
     <input type="text" id="POB" name="POB">
@@ -107,9 +110,9 @@ input[type=submit]:hover {
     <input type="text" id="Responsibility" name="Responsibility"> <br>
     
     <p>هل يوجد خادمة في المنزل ؟</p>
-  <input type="radio"  name="choice-radio" >نعم
+  <input type="radio" checked  name="choiceradio" VALUE="YES" >نعم
 
-  <input type="radio"  name="choice-radio" >لا
+  <input type="radio"  name="choiceradio" VALUE="NO">لا
    <br>
   
   <label for="care">اذا كانت الاجابه (نعم )هل تقول الخادمة برعاية الطفل ؟ </label>
@@ -124,9 +127,9 @@ input[type=submit]:hover {
   <p>هل يميل طفلك الى الهدوء ؟</p>
       </td>
       <td>
-  <input type="radio"  name="choice-radio1" >نعم
+  <input type="radio" CHECKED name="choiceradio1" VALUE="YES" >نعم
 
-  <input type="radio" name="choice-radio1">لا
+  <input type="radio" name="choiceradio1" VALUE="NO">لا
  
   </td>
     </tr>
@@ -137,9 +140,9 @@ input[type=submit]:hover {
   <p>هل يعتمد طفلك على نفسه في استخدام المرحاض؟</p>
       </td>
       <td>
-  <input type="radio"  name="choice-radio2" >نعم
+  <input type="radio" CHECKED name="choiceradio2" VALUE="YES" >نعم
 
-  <input type="radio" name="choice-radio2">لا
+  <input type="radio" name="choiceradio2" VALUE="NO">لا
  
   </td>
     </tr>
@@ -151,9 +154,9 @@ input[type=submit]:hover {
   <p>هل يعتمد طفلك على نفسه في ارتداء ملابسه؟</p>
       </td>
       <td>
-  <input type="radio"  name="choice-radio3" >نعم
+  <input type="radio" CHECKED name="choiceradio3" VALUE="YES" >نعم
 
-  <input type="radio" name="choice-radio3">لا
+  <input type="radio" name="choiceradio3" VALUE="NO">لا
  
   </td>
     </tr>
@@ -165,9 +168,9 @@ input[type=submit]:hover {
   <p>هل يحب الطفل الاختلاط بالاخرين ؟</p>
       </td>
       <td>
-  <input type="radio"  name="choice-radio4" >نعم
+  <input type="radio" checked name="choiceradio4" VALUE="YES">نعم
 
-  <input type="radio" name="choice-radio4">لا
+  <input type="radio" name="choiceradio4" VALUE="NO">لا
  
   </td>
     </tr>
@@ -178,14 +181,14 @@ input[type=submit]:hover {
   <p>هل ينادى الطفل باسم غير اسمه ؟</p>
       </td>
       <td>
-  <input type="radio" name="choice-radio5" >نعم
+  <input type="radio" checked name="choiceradio5" VALUE="YES">نعم
 
-  <input type="radio" name="choice-radio5" >لا
+  <input type="radio" name="choiceradio5" VALUE="NO" >لا
       </td>
     </tr>
    <br>
   <label for="lname">اذا كانت الاجابة (نعم) يذكر الاسم الاخر :</label>
-    <input type="text" id="lname" name="lastname">
+    <input type="text" id="lname" name="lastname2">
 
 
   <tr>
@@ -193,23 +196,23 @@ input[type=submit]:hover {
   <p>هل يعاني الطفل من اي مشاكل صحية؟</p>
      </td>
        <td>
-  <input type="radio"  name="choice-radio6" >نعم
-  <input type="radio"  name="choice-radio6" >لا
+  <input type="radio" CHECKED name="choiceradio6" VALUE="YES">نعم
+  <input type="radio"  name="choiceradio6" VALUE="NO" >لا
    <br>
        </td>
   </tr>
        
     <label for="lname">اذا كانت الاجابة (نعم) الرجاء ذكرها :</label>
-    <input type="text" id="lname" name="lastname">
+    <input type="text" id="lname" name="lastname3">
 
   <tr>
     <td>
   <p>هل يعاني من بعض الصعوبات اللغوية كالتأتأة والتعلثم وغيرها ؟</p>
     </td>
      <td>
-  <input type="radio" name="choice-radio7">نعم
+  <input type="radio" CHECKED name="choiceradio7" VALUE="YES">نعم
  
-  <input type="radio" name="choice-radio7">لا
+  <input type="radio" name="choiceradio7" VALUE="NO">لا
 
      </td>
   </tr>
@@ -220,55 +223,56 @@ input[type=submit]:hover {
   <p>هل يعاني من اضطرابات بالاكل ؟</p>
     </td>
        <td>
-  <input type="radio" name="choice-radio8" >
+  <input type="radio" CHECKED name="choiceradio8" VALUE="YES"> 
  
-  <input type="radio"  name="choice-radio8" > <br>
+  <input type="radio"  name="choiceradio8" VALUE="NO"> <br>
        </td>
   </tr>
 
     <label for="lname">ماهي الاكلات المفضله للطفل ؟ </label>
-    <input type="text" id="lname" name="lastname">
+    <input type="text" id="lname" name="lastname4">
     
     <label for="lname">ماهي الاكلات التي لا يحبها الطفل ؟</label>
-    <input type="text" id="lname" name="lastname">
+    <input type="text" id="lname" name="lastname5">
     
     <label for="lname">ماهي الأشياء التي يخافها الطفل ؟</label>
-    <input type="text" id="lname" name="lastname">
+    <input type="text" id="lname" name="lastname6">
     
     <label for="lname">ماهي الأشياء التي يخافها الطفل ؟</label>
-    <input type="text" id="lname" name="lastname">
+    <input type="text" id="lname" name="lastname7">
   
   <tr>
     <td>
   <p>هل يعاني من حساسية لأي نوع من أنواع الأطعمة أو الادوية؟</p>
     </td>
     <td>
-  <input type="radio"  name="choice-radio9" >نعم
-  <input type="radio" name="choice-radio9" >لا
+  <input type="radio" checked name="choiceradio9" VALUE="YES" >نعم
+  <input type="radio" name="choiceradio9" VALUE="NO">لا
   <br>
     </td>
   </tr>
 
      <label for="lname">نرجو توضيح  طريقة النوم المحببة للطفل :</label>
-    <input type="text" id="lname" name="lastname">
+    <input type="text" id="lname" name="lastname8">
     
     
     
     
         <label for="lname">اسم الشخص الذي قام بتعبئة الاستمارة :</label>
-    <input type="text" id="lname" name="lastname">
+    <input type="text" id="lname" name="lastname9">
         <label for="lname">صلة القرابة بالطفل :</label>
-    <input type="text" id="lname" name="lastname">
+    <input type="text" id="lname" name="lastname10">
      
     <tr>
       <td>ارفق ملف مكون من(صورة سجل العائلة - صورة للطفل - شهادة التطعيم - شهادة الميلاد)</td>
       <td>
-        <input type ="file" >
+        <input type ="file" name="file">
         <br>
       </td>
     </tr>
    <br>
-  <input type="submit">
+  <input type="submit" name="submit"> 
+   <button type="submit" name="submit" class="signupbtn">submit</button> 
   
   </form>
 </div>
